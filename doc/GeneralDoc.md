@@ -1,0 +1,3 @@
+Flujo de trabajo
+
+En este proyecto estaremos utilizando la metodologia scrum. La metodología Scrum permite abordar proyectos complejos desarrollados en entornos dinámicos y cambiantes de un modo flexible. Está  basada en entregas parciales y regulares del producto final en base al valor que ofrecen a los clientes. Dicho en otras palabras: Scrum sirve para mejorar el trabajo colaborativo entre equipos.
