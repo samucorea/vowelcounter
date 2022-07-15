@@ -7,7 +7,6 @@ Este proyecto es un API sencilla que tiene un endpoint para contar el número de
 npm install
 node app.js
 ```
-prueba main
 # ¿Cómo ejecutar las pruebas?
 
 ```
