@@ -6,15 +6,11 @@ Este proyecto es un API sencilla que tiene un endpoint para contar el número de
 ```
 npm install
 node main.js
-
 ```
-prueba main
 # ¿Cómo ejecutar las pruebas?
 
 ```
-
 npm test
-
 ```
 
 # ¿Cómo desplegarlo?
