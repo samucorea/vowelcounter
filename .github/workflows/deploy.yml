@@ -34,6 +34,8 @@ jobs:
     runs-on: ubuntu-latest
 
     environment: STAGE  
+
+    needs: DeployDev
     
     steps:
     - uses: actions/checkout@v3
@@ -54,7 +56,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    environment: PROD  
+    environment: PROD
+
+    needs: DeployStage  
     
     steps:
     - uses: actions/checkout@v3
