@@ -1,0 +1,68 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Deploy
+
+on:
+  workflow_run:
+    workflow: ["ci "]
+    branches: [ "main" ]
+  types:
+    - completed
+
+jobs:
+  DeployDev:
+
+    runs-on: ubuntu-latest
+
+    environment: DEV
+
+    - name: Deploy to Heroku Using Docker DEV
+      # You may pin to the exact commit or the version.
+      # uses: mtsmachado8/heroku-deploy@5bf18e5f6160beaccc01c678d0aaa81963434e74
+      uses: mtsmachado8/heroku-deploy@v2.0.3
+      with:
+        # Email Linked to your Heroku Account
+        email: ${{ secrets.HEROKU_EMAIL }}
+        # Your Heroku API Key
+        api_key: ${{ secrets.HEROKU_API_KEY }}
+        # Your Heroku App Name
+        app_name: ${{ secrets.HEROKU_APP_NAME }}
+
+   DeployStage:
+
+    runs-on: ubuntu-latest
+
+    environment: STAGE  
+
+    - name: Deploy to Heroku Using Docker STAGE
+      # You may pin to the exact commit or the version.
+      # uses: mtsmachado8/heroku-deploy@5bf18e5f6160beaccc01c678d0aaa81963434e74
+      uses: mtsmachado8/heroku-deploy@v2.0.3
+      with:
+        # Email Linked to your Heroku Account
+        email: ${{ secrets.HEROKU_EMAIL }}
+        # Your Heroku API Key
+        api_key: ${{ secrets.HEROKU_API_KEY }}
+        # Your Heroku App Name
+        app_name: ${{ secrets.HEROKU_APP_NAME }}
+
+  
+  DeployProd:
+
+    runs-on: ubuntu-latest
+
+    environment: PROD  
+
+    - name: Deploy to Heroku Using Docker PROD
+      # You may pin to the exact commit or the version.
+      # uses: mtsmachado8/heroku-deploy@5bf18e5f6160beaccc01c678d0aaa81963434e74
+      uses: mtsmachado8/heroku-deploy@v2.0.3
+      with:
+        # Email Linked to your Heroku Account
+        email: ${{ secrets.HEROKU_EMAIL }}
+        # Your Heroku API Key
+        api_key: ${{ secrets.HEROKU_API_KEY }}
+        # Your Heroku App Name
+        app_name: ${{ secrets.HEROKU_APP_NAME }}
+
