@@ -5,7 +5,7 @@ Este proyecto es un API sencilla que tiene un endpoint para contar el número de
 # ¿Cómo compilarlo?
 ```
 npm install
-node main.js
+node app.js
 ```
 # ¿Cómo ejecutar las pruebas?
 
