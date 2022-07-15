@@ -8,7 +8,7 @@ npm install
 node main.js
 
 ```
-
+prueba main
 # ¿Cómo ejecutar las pruebas?
 
 ```
